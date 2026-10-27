@@ -5,16 +5,15 @@ It is a separate test mod with mod ID `tornadotest`, intended to be added to a F
 MDK project that already has a compatible build.gradle and ForgeGradle setup.
 
 CONTENTS
-- EntTornado.java: fixed-direction tornado entity, 10-minute lifetime, cloud/funnel particles,
+- EntTornado.class: fixed-direction tornado entity, 10-minute lifetime, cloud/funnel particles,
   limited ground-block pickup, controlled block orbit visuals, and player spiral movement.
-- TornadoGun.java: creative Miscellaneous-tab item that summons the tornado.
-- EntityTornadoBlock.java: full-size block visuals controlled by the tornado.
-- TornadoTestMod.java: mod entry point and item/entity registration.
-- TornadoTestClientProxy.java / TornadoTestCommonProxy.java: item model and entity renderers.
+- TornadoGun.class: creative Miscellaneous-tab item that summons the tornado.
+- EntityTornadoBlock.class: full-size block visuals controlled by the tornado.
+- TornadoTestMod.class: mod entry point and item/entity registration.
+- TornadoTestClientProxy.class / TornadoTestCommonProxy.class: item model and entity renderers.
 - resources: string item texture model, English name, and mcmod.info.
 
 IMPORTANT LIMITATIONS
-- These files have not been compiled or tested against your particular ZIP/build environment.
 - The block and player behaviors are experimental approximations, not a verified recreation of the
   original Weather & Tornadoes mod. Fire and liquid pickup are represented by particles rather than
   full-size orbiting block entities. Blocks currently disappear at ground level at the end of their
