@@ -1,9 +1,32 @@
-🌪Welcome to the Weather and Tornadoes v0.1 Tornado Mod Remake!!
-Disclaimer: this mod is still in Development, witch means this mod for now will only have a test mod. but its still a playable test mod because the test mod is a .jar.
-version of minecraft thats compatible with the test mod and full mod: Minecraft java 1.10.2
-modloader needed for the test mod and full mod: forge
-what the test mod has:
-Tornado Gun
-only a EF1 tornado in test mod
-incredible flying block system.
-This README.txt will get more info later in Development.
+TORNADO TEST MOD - FULL SOURCE PACK (Minecraft Java Edition 1.10.2 / Forge 1.10.2)
+
+This pack contains a more complete experimental implementation than the earlier starter files.
+It is a separate test mod with mod ID `tornadotest`, intended to be added to a Forge 1.10.2
+MDK project that already has a compatible build.gradle and ForgeGradle setup.
+
+CONTENTS
+- EntTornado.java: fixed-direction tornado entity, 10-minute lifetime, cloud/funnel particles,
+  limited ground-block pickup, controlled block orbit visuals, and player spiral movement.
+- TornadoGun.java: creative Miscellaneous-tab item that summons the tornado.
+- EntityTornadoBlock.java: full-size block visuals controlled by the tornado.
+- TornadoTestMod.java: mod entry point and item/entity registration.
+- TornadoTestClientProxy.java / TornadoTestCommonProxy.java: item model and entity renderers.
+- resources: string item texture model, English name, and mcmod.info.
+
+IMPORTANT LIMITATIONS
+- These files have not been compiled or tested against your particular ZIP/build environment.
+- The block and player behaviors are experimental approximations, not a verified recreation of the
+  original Weather & Tornadoes mod. Fire and liquid pickup are represented by particles rather than
+  full-size orbiting block entities. Blocks currently disappear at ground level at the end of their
+  controlled spiral instead of being placed back into the world.
+- The bubble is particle-based. It is not a solid collision shell.
+- The test mod uses its own mod ID (`tornadotest`) to avoid colliding with a separate full mod whose
+  ID is `weatherandtornadoes`. If you merge these into a project, keep the package path and resource
+  folder names consistent.
+- The existing build.gradle must be configured for Forge 1.10.2, Java 8, and compatible ForgeGradle.
+  A successful source pack alone does not guarantee a buildable JAR.
+
+Suggested Java source folder:
+src/main/java/com/weatherandtornadoes/
+Suggested resource folder:
+src/main/resources/
