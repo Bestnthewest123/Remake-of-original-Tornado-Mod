@@ -24,7 +24,7 @@ jobs:
       - name: Find and extract project ZIP
         shell: bash
         run: |
-          ZIP_FILE="TornadoMod_fixed.zip"
+          ZIP_FILE="TornadoMod_fixed2.zip"
           if [ -z "$ZIP_FILE" ]; then
             echo "ERROR: No ZIP file found in the repository root."
             exit 1
